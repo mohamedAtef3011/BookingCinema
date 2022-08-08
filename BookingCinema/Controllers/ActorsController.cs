@@ -15,7 +15,7 @@ namespace BookingCinema.Controllers
 
         public IActionResult Index()
         {
-            var data = _context.Actors.ToList();
+            var data = _context.Actors;
             return View(data);
         }
     }
