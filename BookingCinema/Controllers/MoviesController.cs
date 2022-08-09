@@ -16,7 +16,7 @@ namespace BookingCinema.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var movies = await _context.Movies.ToListAsync();
+            var movies = await _context.Movies.Include(m=>m.Cinema).ToListAsync();
 
             return View(movies);
         }
